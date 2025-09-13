@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nembo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Menu Bar -->
+    <header>
+        <div class="menu-items">
+            <div class="dropdown">
+                <span class="dropbtn">File</span>
+                <div class="dropdown-content">
+                    <a href="#">Save Project</a>
+                    <a href="#">Export</a>
+                    <a href="#">Exit</a>
+                </div>
+            </div>
+            <span>Help</span>
+            <div style="right: 10%;position: absolute;">
+                 <span id="undo">undo</span>
+                 <span id="redo">redo</span>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- Main Content Area: Toolbar, Artboard, and Panels -->
+    <div class="main-content-area">
+
+        <!-- Left Toolbar -->
+        <aside class="toolbar">
+            <div class="tool-icon tool-active" title="Select" >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="select_mode" title="select" ><path d="M12 2L3 15h6L12 22 15 15h6L12 2z"  title="select" ></path></svg>
+            </div>
+            <div class="tool-icon" title="Shapes" id="shapeState" >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="rectangle" ><rect  width="1rem" height="0.8rem"  title="shapes" x="5" y="5" /></svg>
+            </div> 
+             <div class="tool-icon " title="Text" id="textState" >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" id="textStateIcon" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >  <text x="5" y="15" fill="red">A</text></svg>
+            </div>
+        </aside>
+
+        <!-- Main Artboard Area -->
+        <main class="artboard artboard-bg">
+            <canvas class="artboard-canvas" id="board" width="640" height="480"></canvas>
+            <div id="mouse-pop" class="mouse-pop">
+                <ul>
+                    <li id="clone">Clone</li>
+                    <li id="delete">Delete</li>
+                </ul>
+            </div>
+        </main>
+
+        <!-- Right Panels -->
+        <aside class="panels">
+            <!-- Panel Tabs -->
+            <div class="panel-tabs">
+                <button class="panel-tab panel-active">Properties</button>
+                <button class="panel-tab">Layers</button>
+            </div>
+            <!-- Panel Content -->
+            <div id="properties-panel" class="panel-content">
+             
+            </div>
+            <div id="layers-panel" class="panel-content" style="display: none;">
+                <div class="section-group" id="actual">
+                    
+                </div>
+            </div>
+        </aside>
+        <div  style="background-color: orange;position:absolute;top:12.5%;left:5%;width:2.5%;border-radius:5px;height:25vh;display: none;" id="element-options">
+            <div class="tool-icon-shapes" title="Shapes" style="margin: 5px;" id="rectangle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="rectangle" ><rect  width="1rem" height="0.6rem"  title="shapes" x="5" y="5" /></svg>
+            </div> 
+            <div class="tool-icon-shapes" title="circle" style="margin: 5px;" id="arc">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24"  ><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="4" fill="currentColor" /></svg>        
+            </div>  
+            <div class="tool-icon-shapes" title="ellipse" style="margin: 5px;" id="ellipse" >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24"  >  <ellipse cx="12" cy="12" rx="10" ry="5" fill="currentColor"/></svg>        
+            </div> 
+            <div class="tool-icon-shapes" title="star" style="margin: 5px;" id="star">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24"  >   <polygon points="10,1 4,19.8 19,7.8 1,7.8 16,19.8" fill="currentColor"/></svg>        
+            </div> 
+            <div class="tool-icon-shapes" title="polygon" style="margin: 5px;" id="polygon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24"><polygon points="10,4 2,20 16,20" fill="currentColor"/></svg>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scripts/index.js" type="module" ></script>
+    <script>
+        
+    </script>
+</body>
+</html>
