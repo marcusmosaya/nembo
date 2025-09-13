@@ -14,7 +14,7 @@ app.use(express_1.default.static(path_1.default.join(__dirname, "public")));
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use(passport_1.default.initialize());
-app.get("/pane", (req, res, nexr) => {
+app.get("/", (req, res, nexr) => {
     res.render("pane");
 });
 exports.default = app;
