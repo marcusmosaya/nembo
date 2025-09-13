@@ -22,5 +22,6 @@ export class Canvas {
         this._canvas.addEventListener('mousedown', (e) => { this._mouseActionCtx.mouseDown(e); });
         this._canvas.addEventListener('mousemove', (e) => { this._mouseActionCtx.mouseMove(e); });
         this._canvas.addEventListener('mouseup', (e) => { this._mouseActionCtx.mouseUp(e); });
+        this._canvas.addEventListener('contextmenu', (e) => { this._mouseActionCtx.contextMenu(e); });
     }
 }

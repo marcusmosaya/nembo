@@ -19,4 +19,7 @@ export class MouseActionContext {
     mouseMove(e) {
         this._state.handleMouseMove(e, this._canvas);
     }
+    contextMenu(e) {
+        this._state.handleContextMenu(e, this._canvas);
+    }
 }

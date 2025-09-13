@@ -8,6 +8,8 @@ export class IState {
     }
     handleMouseUp(e, _canvas) {
     }
+    handleContextMenu(e, _canvas) {
+    }
 }
 export class SelectState extends IState {
     handleMouseDown(e, _canvas) {

@@ -164,16 +164,16 @@ shapeElement.addEventListener("contextmenu", (e) => {
     e.preventDefault();
     elementOptionsPane.style.display = "block";
 });
-canvas.addEventListener("contextmenu", (e) => {
+/*canvas.addEventListener("contextmenu",(e)=>{
     console.log(e);
-    mousepop.style.left = `${String(e.clientX)}px`;
-    mousepop.style.top = `${String(e.clientY)}px`;
-    if (canvas_class._panel._selectedElement === null)
-        return;
+    mousepop.style.left=`${String(e.clientX)}px`;
+    mousepop.style.top=`${String(e.clientY)}px`;
+    if(canvas_class._panel._selectedElement===null) return;
+    
     if (canvas_class._mouseActionCtx.getState() instanceof SelectState) {
-        mousepop.style.display = "block";
+          mousepop.style.display="block";
     }
-});
+});*/
 deleteElement.addEventListener("click", (e) => {
     var _a;
     if (canvas_class._panel._selectedElement) {
